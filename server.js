@@ -9,11 +9,8 @@ const Connection = require("./connection/dbConnection");
 app.use(express.json());
 app.use('/api/users', userRoutes);
 //port at which server running
-var PORT = process.env.PORT || 5000;
-//@info server listening
-// app.get("/api/users",(req,res)=>{
-// res.send("api ok")
-// })
+var PORT = process.env.PORT || 5001;
+
 var server = app.listen(PORT, () => {
     Connection()
     console.log("Server is listening on port::", PORT);
